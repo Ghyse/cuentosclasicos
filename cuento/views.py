@@ -11,5 +11,6 @@ def show_main_cuentos(request):
 def show_cuento(request, pk):
 	exist = get_object_or_404(Cuento, pk=pk) # su la id no existe
 	titulo = Cuento.objects.get(pk=pk)
+	
 	capitulos = Capitulo.objects.filter(cuento=titulo).order_by('id')
 	return render (request, "cuento/cuento.html", {'capitulos':capitulos, 'titulo': titulo })

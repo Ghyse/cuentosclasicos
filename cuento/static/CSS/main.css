@@ -30,7 +30,7 @@ body{
 	
 }
 .titleContainer h2{
-	padding: 30px;
+	padding: 100px;
 }
 
 .header{
@@ -58,10 +58,14 @@ body{
 
 .footer{
 	/*background: rgb(38, 77, 115);*/
-	padding: 20px;
+	padding: 100px;
 	color: #b3cce6;
 	text-align: center;
 	bottom: 0;
 	position: relative;
 	width: 100%
+}
+
+.footer p{
+	padding: 100px;
 }
