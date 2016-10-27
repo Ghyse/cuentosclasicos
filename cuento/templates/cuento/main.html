@@ -1,0 +1,13 @@
+{% extends 'cuento/head.html' %}
+
+{% block content %}
+	<h4>Enjoy reading them!</h4>
+	<div class="cuentos container-resonsive">
+		{% for cuento in cuentos%}
+			<a href="{% url 'cuento.views.show_cuento' pk=cuento.pk %}"><h3>{{ cuento.title }}</h3></a>
+		{% endfor %}
+	</div>
+	
+
+
+{% endblock %}
