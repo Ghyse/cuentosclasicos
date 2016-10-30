@@ -2,11 +2,11 @@
 
 
 {% block content %}
-	<div class="titleContainer">
-		<h2>{{ titulo }}</h2> 
-		<div class="row">
+	<div class="midle container-responsive">
+		<h2 class="titleCuento">{{ titulo }}</h2> 
+		<div class="">
 			{%  for capitulo in capitulos  %}
-				<div class="cap col-xs-12" style=" background-image: url('{{  capitulo.img.url  }}')">
+				<div class="capitulo" style="background-image: url('{{  capitulo.img.url  }}')">
 					<p>{{capitulo | linebreaksbr}}</p>
 				</div>
 			{% endfor %}

@@ -1,13 +1,17 @@
 {% extends 'cuento/head.html' %}
 
 {% block content %}
-	<h4>Enjoy reading them!</h4>
-	<div class="cuentos container-resonsive">
-		{% for cuento in cuentos%}
-			<a href="{% url 'cuento.views.show_cuento' pk=cuento.pk %}"><h3>{{ cuento.title }}</h3></a>
-		{% endfor %}
+	<div class="midle container-responsive">
+		<h4>Read</h4>
+		<br>
+		<div class="row ">
+			<div class="col-xs-12">
+			<ul>
+				{% for cuento in cuentos%}
+					<li class="cuentoCircle container-responsive" style="max-width: 30%; background-image: url('{{ cuento.iconImg.url }}')" ><spin class="layer"><a href="{% url 'cuento.views.show_cuento' pk=cuento.pk %}"><p>{{ cuento.title }}</p></a></spin></li>
+				{% endfor %}
+			</ul>
+		</div>
+		</div>
 	</div>
-	
-
-
 {% endblock %}

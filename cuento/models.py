@@ -4,6 +4,7 @@ from django.db import models
 class Cuento(models.Model):
 	title = models.CharField(max_length=200)
 	texto = models.TextField()
+	iconImg = models.ImageField(default="none")
 
 	def __str__(self):
 		return self.title
