@@ -1,15 +1,21 @@
 {% extends 'cuento/head.html' %}
+{% load staticfiles %}
 
 
 {% block content %}
+	
+
 	<div class="midle container-responsive">
 		<h2 class="titleCuento">{{ titulo }}</h2> 
-		<div class="">
+		<div id="cuentos">
+			<button action="show()" class="btn flecha" id="left" style="left:0px;border-radius: 0 5px 5px 0; padding-left: 15px"><i class="fa fa-angle-left fa-lg"></i></button>
+			<button action="show()" class="btn flecha" id="right" style="right:0px;border-radius: 5px 0 0 5px; padding-right: 15px"><i class="fa fa-angle-right fa-lg"></i></button>
 			{%  for capitulo in capitulos  %}
-				<div class="capitulo" style="background-image: url('{{  capitulo.img.url  }}')">
+				<div class="capitulo fade" style="background-image: url('{{  capitulo.img.url  }}')" id="{{ forloop.counter }}">
 					<p>{{capitulo | linebreaksbr}}</p>
 				</div>
 			{% endfor %}
+			<script type="text/javascript" src= "{% static 'js/gallery.js' %}"></script>
 		</div>
 	</div>
 {% endblock %}
