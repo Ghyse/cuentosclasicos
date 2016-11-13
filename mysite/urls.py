@@ -10,6 +10,8 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', include('cuento.urls')),  
-    url(r'^cuento/(?P<pk>[0-9]+)/$', views.show_cuento),
+    url(r'', include('cuento.urls')),  
+   
+    
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
